@@ -61,7 +61,6 @@ flowchart TD
 
 * **Idempotent Ingestion:** The `src/ingest.py` script is designed to be re-runnable without duplicating records, ensuring database consistency.
 * **Separation of Concerns:** Data storage logic (SQL) is kept distinct from analytical logic (Jupyter), allowing the model to query "feature-ready" data directly from the database rather than relying on brittle local CSVs.
-* **Modular Evolution:** The repository structure is organized to support the "Model Evolution" methodology, where experiments (`exp_01`, `exp_02`, etc.) are tracked and versioned against a consistent baseline.
 
 ## Research Journal: Weekly Iterations
 
