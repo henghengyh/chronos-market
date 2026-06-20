@@ -18,7 +18,7 @@ This project is built using an industry-standard stack designed for reproducible
 | **Language** | Python 3.13.9 | Data ingestion, feature engineering, and model training. |
 | **Data Source** | `yfinance` | Automated API retrieval of historical market data. |
 | **Database** | TimescaleDB | PostgreSQL-based time-series storage with hypertable partitioning. |
-| **DB Driver** | `psycopg2` & `SQLAchemy` | ORM and database adapter for secure, robust SQL operations. |
+| **DB Driver** | `SQLAchemy` | ORM and database adapter for secure, robust SQL operations. |
 | **Infrastructure**| Docker & Docker Compose | Containerized database environment ensuring environment parity. |
 | **Analysis** | Jupyter Notebooks | Interactive Exploratory Data Analysis (EDA) and visualization. |
 | **Version Control**| Git / GitHub | Documenting the 4-week iterative "Research Journal." |

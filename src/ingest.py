@@ -9,14 +9,6 @@ from sqlalchemy import text
 # ============================================
 # Configuration
 # ============================================
-
-# Stock symbol to download
-symbol = "NVDA"
-
-# Historical data period
-start_date = "2016-01-01"
-end_date = "2026-06-15"
-
 # Load variables from .env file
 load_dotenv()
 
@@ -34,7 +26,11 @@ db_url = (
     f"{DB_NAME}"
 )
 
-def ingest_data(symbol="NVDA"):
+def ingest_data(
+        symbol="NVDA", 
+        start_date = "2016-01-01",
+        end_date = "2026-06-15"
+):
     # ============================================
     # 1. EXTRACT: Download stock data
     # ============================================
@@ -51,7 +47,7 @@ def ingest_data(symbol="NVDA"):
     data = data.reset_index()
     data.columns = data.columns.get_level_values(0) if hasattr(data.columns, 'get_level_values') else data.columns
     data.columns = [str(col) for col in data.columns]
-    
+
     data = data[['Date', 'Close', 'Volume']]
     
     data = data.rename(columns={
