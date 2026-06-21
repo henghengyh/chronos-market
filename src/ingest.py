@@ -73,4 +73,4 @@ def ingest_data(
     print(f"Successfully ingested {len(data)} rows.")
 
 if __name__ == "__main__":
-    ingest_data(symbol)
+    ingest_data()
